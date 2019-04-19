@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  View, Image, Text, TouchableOpacity,
-} from 'react-native';
+import { View, Image, Text, TouchableOpacity } from 'react-native';
 
 import twenty from '../../../docs/bobacup25.png';
 import twentyselected from '../../../docs/bobacup25-selected.png';
@@ -27,7 +25,7 @@ class About extends React.Component {
   };
 
   // Update sweetness onPress
-  selectSweetness = (sweetness) => {
+  selectSweetness = sweetness => {
     this.setState({ sweetness });
   };
 
@@ -35,21 +33,32 @@ class About extends React.Component {
     const { sweetness } = this.state;
     return (
       <View style={styles.main}>
-
         <Text style={styles.subtitle}>Select your sweetness</Text>
 
         <View style={styles.sweetness}>
           <TouchableOpacity onPress={() => this.selectSweetness('25')}>
-            <Image style={styles.img} source={sweetness === '25' ? twentyselected : twenty} />
+            <Image
+              style={styles.img}
+              source={sweetness === '25' ? twentyselected : twenty}
+            />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => this.selectSweetness('50')}>
-            <Image style={styles.img} source={sweetness === '50' ? fiftyselectd : fifty} />
+            <Image
+              style={styles.img}
+              source={sweetness === '50' ? fiftyselectd : fifty}
+            />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => this.selectSweetness('75')}>
-            <Image style={styles.img} source={sweetness === '75' ? seventyselected : seventy} />
+            <Image
+              style={styles.img}
+              source={sweetness === '75' ? seventyselected : seventy}
+            />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => this.selectSweetness('100')}>
-            <Image style={styles.img} source={sweetness === '100' ? hundredselected : hundred} />
+            <Image
+              style={styles.img}
+              source={sweetness === '100' ? hundredselected : hundred}
+            />
           </TouchableOpacity>
         </View>
         <Text style={styles.subtitle}>Select your boba amount</Text>
