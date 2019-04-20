@@ -1,4 +1,5 @@
 
+# Boba Baes Makers Project 2019
 ## Intro
 
 React Native App made by the Boba Baes team for our Makers Showcase in Spring 2019. App supports our boba making machine. User can customize their cup of boba on the app. Our boba machine has IoT features and connects to our app through bluetooth to start the boba making process. 
