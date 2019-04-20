@@ -1,8 +1,16 @@
+# Boba Baes Makers Project 2019  <img src="src/images/boba-icon.png" width="120px"/>
 
-# Boba Baes Makers Project 2019
 ## Intro
 
 React Native App made by the Boba Baes team for our Makers Showcase in Spring 2019. App supports our boba making machine. User can customize their cup of boba on the app. Our boba machine has IoT features and connects to our app through bluetooth to start the boba making process. 
+
+__Our team members are__:
+Radhika Agrawal,
+Aliya Petranik,
+Andrew Opem,
+Chris Hailey,
+Ryan Winters,
+Teyva Chee
 
 Thanks to the starter boilerplate we used for this project!
 https://github.com/mcnamee/react-native-starter-kit/
