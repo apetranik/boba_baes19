@@ -66,6 +66,42 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingTop: 10,
   },
+  textOptions: {
+    fontSize: 16,
+    alignSelf: 'center',
+  },
+
+
+  selected_touch: {
+    backgroundColor: 'violet',
+    margin: 10,
+    padding: 10,
+    flex: 1,
+    borderRadius: 10,
+  },
+  non_selected_touch: {
+    backgroundColor: '#fff',
+    margin: 10,
+    padding: 10,
+    flex: 1,
+    borderRadius: 10,
+  },
+  start_button: {
+    margin: 10,
+    padding: 25,
+    flex: 2,
+    display: 'flex',
+    backgroundColor: 'green',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  startText: {
+    flex: 1,
+    fontSize: 20,
+    alignSelf: 'center',
+    color: '#fff',
+  },
+
 });
 
 export default styles;

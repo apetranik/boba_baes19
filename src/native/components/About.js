@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, Image, Text, TouchableOpacity } from 'react-native';
+import {
+  View, Image, Text, TouchableOpacity,
+} from 'react-native';
 
 import twenty from '../../../docs/bobacup25.png';
 import twentyselected from '../../../docs/bobacup25-selected.png';
@@ -22,15 +24,42 @@ import styles from './styles';
 class About extends React.Component {
   state = {
     sweetness: '',
+    firmness: '',
+    inProgress: false,
+
   };
 
   // Update sweetness onPress
-  selectSweetness = sweetness => {
+  selectSweetness = (sweetness) => {
     this.setState({ sweetness });
   };
 
+  selectFirmness = (firmness) => {
+    this.setState({ firmness });
+  };
+
+  start = () => {
+    this.setState({ inProgress: true });
+
+  }
+
+  back = () => {
+    this.setState({ inProgress: false });
+  }
+
   render() {
-    const { sweetness } = this.state;
+    const { sweetness, firmness } = this.state;
+    if (this.state.inProgress) {
+      return (
+        <View>
+          <TouchableOpacity>
+            <Text onPress={() => this.back()}> Back</Text>
+
+          </TouchableOpacity>
+
+        </View>
+      );
+    }
     return (
       <View style={styles.main}>
         <Text style={styles.subtitle}>Select your sweetness</Text>
@@ -61,14 +90,32 @@ class About extends React.Component {
             />
           </TouchableOpacity>
         </View>
-        <Text style={styles.subtitle}>Select your boba amount</Text>
+        <Text style={styles.subtitle}>Select your firmness</Text>
 
         <View style={styles.bobaAmount}>
-          <Image style={styles.img} source={none} />
-          <Image style={styles.img} source={little} />
-          <Image style={styles.img} source={more} />
-          <Image style={styles.img} source={ton} />
+          <TouchableOpacity onPress={() => this.selectFirmness('0')} style={firmness === '0' ? styles.selected_touch : styles.non_selected_touch}>
+
+            <Text style={styles.textOptions}> Soft </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => this.selectFirmness('50')} style={firmness === '50' ? styles.selected_touch : styles.non_selected_touch}>
+
+            <Text style={styles.textOptions}> Normal </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => this.selectFirmness('100')} style={firmness === '100' ? styles.selected_touch : styles.non_selected_touch}>
+
+            <Text style={styles.textOptions}> Firm </Text>
+          </TouchableOpacity>
+
         </View>
+
+
+        <TouchableOpacity onPress={() => this.start()} style={styles.start_button}>
+          <Text style={styles.startText}> START BOBA </Text>
+        </TouchableOpacity>
+
+
       </View>
     );
   }
