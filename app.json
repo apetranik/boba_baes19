@@ -1,30 +1,29 @@
 {
   "expo": {
-    "name": "React Native Starter Kit",
-    "description": "This is a boilerplate that launches with a React web app and React Native mobile app. It shares a single code base! The 'business logic' (i.e. actions, containers, reducers) is shared across both platforms, whilst allowing flexibility in View components to ensure your project looks and feels native in each platform. - https://github.com/mcnamee/react-native-starter-kit",
-    "slug": "react-native-starter-kit",
-    "privacy": "public",
-    "sdkVersion": "32.0.0",
-    "platforms": [
-      "ios",
-      "android"
-    ],
+    "name": "Boba Baes",
+    "icon": "./docs/icon-label.png",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./src/images/app-icon.png",
-    "splash": {
-      "image": "./src/images/launch.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#473be7"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "slug": "your-app-slug",
+    "sdkVersion": "32.0.0",
     "ios": {
-      "supportsTablet": true
-    }
+      "bundleIdentifier": "com.bobabaes.bobamachine",
+      "publishBundlePath": "ios/boba-baes/Supporting/shell-app.bundle",
+      "publishManifestPath": "ios/boba-baes/Supporting/shell-app-manifest.json"
+    },
+    "android": {
+      "package": "com.bobabaes.bobamachine",
+      "publishBundlePath": "android/app/src/main/assets/shell-app.bundle",
+      "publishManifestPath": "android/app/src/main/assets/shell-app-manifest.json"
+    },
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "isDetached": true,
+    "detach": {
+      "iosExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/ios-v2.10.6-sdk32.0.0-e50ee83a-41bd-4965-b067-4c815a3b3fcc.tar.gz",
+      "androidExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/android-v2.10.8-sdk32.0.0-bca0f957-de78-44c8-91ed-f3151372d79d.tar.gz"
+    },
+    "scheme": "exp62c3c042cee24b8ab106bece68ce3bb2"
   }
 }

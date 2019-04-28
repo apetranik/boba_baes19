@@ -1,0 +1,6 @@
+module Pods_boba_baes {
+  umbrella header "Pods-boba-baes-umbrella.h"
+
+  export *
+  module * { export * }
+}
